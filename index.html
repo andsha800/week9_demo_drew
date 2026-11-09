@@ -30,11 +30,8 @@
       const viewElement = document.querySelector("arcgis-map");
       await viewElement.viewOnReady(); // Wait for the properties to be ready.
 
-      // Configure the renderer to alter the symbol style, size breaks, and legend.
-      // const outline = { color: "#A9A9A9", width: 0.5 }; // autocasts as new SimpleLineSymbol()
       const renderer = {
         type: "simple", // autocasts as new SimpleRenderer()
-        // autocasts as new SimpleMarkerSymbol()
         symbol: { type: "simple-marker", size: 9, color: "#FF8C00", outline: { color: "#ffffff", width: 1 } },
       };
 
